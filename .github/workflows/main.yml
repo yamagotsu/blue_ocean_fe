@@ -1,17 +1,17 @@
 name: Build and Deploy Blue Ocean
 
 on:
-  push: 
-    branch: [ master ]
-    
+  push:
+    branch: [master]
+
   # Run workflow manually
   workflow_dispatch:
-  
+
 jobs:
-  build: 
+  build:
     name: Build
     runs-on: ubuntu-latest
-    steps: 
+    steps:
       - name: Checkout repository
         uses: actions/checkout@master
       - name: Install dependencies
@@ -39,5 +39,5 @@ jobs:
         uses: w9jds/firebase-action@master
         with:
           args: deploy --only hosting
-        env: 
+        env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
