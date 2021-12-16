@@ -1,6 +1,18 @@
 import logo from '../../assets/logo.svg';
 import './App.css';
 
+import firebase from 'firebase/app';
+
+firebase.initializeApp({
+  apiKey: "AIzaSyBAsoMYxzM46yavU-4Em-1ihbBNWzznvDg",
+  authDomain: "blueocean-612b2.firebaseapp.com",
+  projectId: "blueocean-612b2",
+  storageBucket: "blueocean-612b2.appspot.com",
+  messagingSenderId: "43711589559",
+  appId: "1:43711589559:web:effcb703d3262364feb132",
+  measurementId: "G-TW42PT564X"
+})
+
 function App() {
   return (
     <div className="App">
