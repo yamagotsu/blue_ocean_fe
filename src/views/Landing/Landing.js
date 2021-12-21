@@ -2,50 +2,45 @@ import React from 'react';
 import './Landing.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
-import soldier_draft from '../../assets/soldier_draft.png'
+import soldier_draft from '../../assets/soldier_draft.png';
+import eye from '../../assets/eye.svg';
+import eye_slash from '../../assets/eye-slash.svg';
 
 
 const Landing = () => {
+    const showHidePassword = (e) => {
+        let input = document.getElementById('password-input');
+        input.type = input.type === 'password' ? 'text' : 'password';
+        e.target.src = input.type === 'password' ? eye : eye_slash;
+    }
+
     return (
-        <div>
-            <div id={'login-section'} className={'section'}>
-            
-            <div className='top-box'> 
-            <form className='top-form'>
-                <div class="mb-3">               
-
-                
-                    <h1>LOGIN</h1>               
-                                                            
-                    <label for="exampleInputEmail1" class="form-label" >Email:</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='ENTER YOUR EMAIL'/>
-                    <div></div> 
-                    <label for="exampleInputPassword1" class="form-label">Password:</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="ENTER YOUR PASSWORD"/></div>     
-                    
-                    <button type="submit" class="btn btn-outline-dark">Submit</button> 
-
-                    <button type="submit" class="btn btn-outline-dark" id='button2' >Forgot Password</button>                  
-                     
-                    <button type="submit" class="btn btn-outline-dark" id='button3'>New User</button>                      
-
-                    <img className='top-picture' src={soldier_draft} />                 
-                    
-             </form>  
-            
-             </div>               
+        <div id={'login-section'} className={'section'}>
+            <div id={'login-section-inner'}>
+                <h1 id={'landing-title'}>
+                    Tracking a new <span id={'landing-title-span'}>YOU</span>
+                </h1>
+                <img id={'soldier-logo'} src={soldier_draft} alt={''} />
+                <div id={'login-form'} className={'form'}>
+                    <h3 className={'form-title'}>Login</h3>
+                    <div className={'form-separator'}> </div>
+                    <div className={'form-inner'}>
+                        <input type={'text'} className={'form-input'} placeholder={'username'} />
+                        <div>
+                            <input id={'password-input'} type={'password'} className={'form-input'} placeholder={'password'} />
+                            <img className={'show-pw-img'} src={eye} alt={''} onClick={showHidePassword} />
+                        </div>
+                        <button className={'form-submit'}>Login</button>
+                    </div>
                 </div>
-
-
-             {/* <div id={'about-section'} className={'section'}>
-
-            </div>
-
-
-            <div id={'contact-section'} className={'section'}>
-
-            </div>  */}
+                <p id={'password-prompt'} className={'form-prompt'}>
+                    Forgot your password? Click <a className={'form-link'} href={'/'}>here</a>
+                </p>
+                <p id={'signup-prompt'} className={'form-prompt'}>
+                    Don't have an account? Signup <a className={'form-link'} href={'/'}>here</a>
+                </p>
         </div>
+    </div>
     )
 };
 
