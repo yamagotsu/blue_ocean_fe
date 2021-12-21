@@ -2,8 +2,7 @@ import React from 'react';
 import './Landing.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
-import rough_draft from './rough_draft.png'
-import soldier_draft from './soldier_draft.png'
+import soldier_draft from '../../assets/soldier_draft.png'
 
 
 const Landing = () => {
