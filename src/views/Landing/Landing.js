@@ -15,8 +15,11 @@ const Landing = () => {
     }
 
     return (
-        <div>
-            <div id={'login-section'} className={'section'}>
+        <div id={'login-section'} className={'section'}>
+            <div id={'login-section-inner'}>
+                <h1 id={'landing-title'}>
+                    Tracking a new <span id={'landing-title-span'}>YOU</span>
+                </h1>
                 <img id={'soldier-logo'} src={soldier_draft} alt={''} />
                 <div id={'login-form'} className={'form'}>
                     <h3 className={'form-title'}>Login</h3>

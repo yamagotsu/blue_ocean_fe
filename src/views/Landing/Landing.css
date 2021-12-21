@@ -7,11 +7,36 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
     background:radial-gradient(#4b5563,#111827);
+}
+
+#login-section-inner {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+
+    position: relative;
+    width: 700px;
 }
 
 #soldier-logo {
     margin-top: 100px;
+}
+
+#landing-title {
+    position: absolute;
+    left: -400px;
+    top: 200px;
+    margin-left: 200px;
+
+    color: #4b5563;
+    font-size: xxx-large;
+}
+
+#landing-title-span {
+    color: #fb923c;
+    text-decoration: underline;
 }
 
 .form {
@@ -22,7 +47,7 @@
 
 #login-form {
     margin-top: 100px;
-    margin-left: 290px;
+    margin-left: 340px;
 }
 
 .form-title {
@@ -88,11 +113,11 @@
 
 #password-prompt {
     margin-top: 30px;
-    margin-left: 200px;
+    margin-left: 340px;
 }
 
 #signup-prompt {
-    margin-left: 220px;
+    margin-left: 340px;
 }
 
 .form-link {
