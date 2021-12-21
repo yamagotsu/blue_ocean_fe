@@ -1,0 +1,113 @@
+.newUserbox {
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    margin-top: 200px;
+  margin-left: 700px;
+  margin-bottom: 200px;
+  width: 500px;
+  display: block;
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  align-self: center;
+  border-radius: 10px;  
+  background: rgba( 255, 255, 255, 0.1 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 20px );
+  -webkit-backdrop-filter: blur( 20px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  font-size: 25px;
+}
+
+.newUserbox:hover {
+  box-shadow: 10px 10px 10px 5px black;
+}
+
+.userInputbasic {
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-size: 25;
+    display: flex;
+  justify-items: left;
+}
+
+.userInputshort {
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    display: flex;
+  margin: 60px;
+}
+.userInputbasic {
+  margin: 60px;
+}
+.newUserbox .long {
+    border-width: 0px;
+    border-color: #6998AB;
+  border-radius: 20px;
+  margin-left: 10px;
+}
+
+.userInputshort .short {
+    border-width: 0px;
+    border-color: #6998AB;
+  margin-left: 10px;
+  border-radius: 8px;
+  width: 35px;
+}
+
+.signinButton{
+    margin: 25px;
+    border-width: 0px;
+    border-radius: 20px;
+    height: 30px;
+    width: 80px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.signinButton:hover{ 
+    background-color: turquoise;
+}
+
+body {
+    background: linear-gradient(270deg, #47c2d0, #1013e3);
+    background-size: 400% 400%;
+
+    -webkit-animation: AnimationName 16s ease infinite;
+    -moz-animation: AnimationName 16s ease infinite;
+    animation: AnimationName 16s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 97%}
+    50%{background-position:100% 4%}
+    100%{background-position:0% 97%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 97%}
+    50%{background-position:100% 4%}
+    100%{background-position:0% 97%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 97%}
+    50%{background-position:100% 4%}
+    100%{background-position:0% 97%}
+}
+
+.topHeader{
+    margin-top: 20px;
+}
+
+a{
+color: rgb(79, 173, 228);
+text-decoration: none;
+background-color: transparent;
+
+}
+
+a:hover{
+    color: blue;
+    background-color: transparent;
+    text-decoration: none;
+}

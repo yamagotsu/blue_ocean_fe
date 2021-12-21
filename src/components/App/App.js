@@ -4,6 +4,7 @@ import { initializeApp } from "firebase/app";
 import Landing from '../../views/Landing/Landing';
 import logo from '../../assets/logo.svg';
 
+
 const firebaseConfig = {
   apiKey: "AIzaSyBAsoMYxzM46yavU-4Em-1ihbBNWzznvDg",
   authDomain: "blueocean-612b2.firebaseapp.com",
@@ -20,7 +21,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Landing />} />
+        <Route path="/" element={<Landing/>} />
       </Routes>
     </BrowserRouter>
   )
