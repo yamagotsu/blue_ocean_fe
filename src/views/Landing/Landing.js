@@ -5,6 +5,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import soldier_draft from '../../assets/soldier_draft.png';
 import eye from '../../assets/eye.svg';
 import eye_slash from '../../assets/eye-slash.svg';
+import Nav from '../../components/LeftNavBar/nav';
 
 
 const Landing = () => {
@@ -16,6 +17,7 @@ const Landing = () => {
 
     return (
         <div id={'login-section'} className={'section'}>
+            <Nav />
             <div id={'login-section-inner'}>
                 <h1 id={'landing-title'}>
                     Tracking a new <span id={'landing-title-span'}>YOU</span>
