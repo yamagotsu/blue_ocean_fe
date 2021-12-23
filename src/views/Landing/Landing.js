@@ -5,10 +5,14 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import soldier_draft from '../../assets/soldier_draft.png';
 import eye from '../../assets/eye.svg';
 import eye_slash from '../../assets/eye-slash.svg';
-import Nav from '../../components/LeftNavBar/nav';
+import { useNavigate } from 'react-router-dom';
+;
 
 
 const Landing = () => {
+    const navigate = useNavigate()
+    
+    
     const showHidePassword = (e) => {
         let input = document.getElementById('password-input');
         input.type = input.type === 'password' ? 'text' : 'password';
@@ -17,7 +21,8 @@ const Landing = () => {
 
     return (
         <div id={'login-section'} className={'section'}>
-            <Nav />
+            
+
             <div id={'login-section-inner'}>
                 <h1 id={'landing-title'}>
                     Tracking a new <span id={'landing-title-span'}>YOU</span>
@@ -32,7 +37,7 @@ const Landing = () => {
                             <input id={'password-input'} type={'password'} className={'form-input'} placeholder={'password'} />
                             <img className={'show-pw-img'} src={eye} alt={''} onClick={showHidePassword} />
                         </div>
-                        <button className={'form-submit'}>Login</button>
+                        <button className={'form-submit'} onClick={() => navigate('/home')}>Login</button>
                     </div>
                 </div>
                 <p id={'password-prompt'} className={'form-prompt'}>

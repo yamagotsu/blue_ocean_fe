@@ -17,6 +17,9 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
+import { useNavigate } from 'react-router-dom';
+
+import './nav.css'
 
 const drawerWidth = 240;
 
@@ -66,9 +69,11 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 }));
 
 export default function PersistentDrawerLeft() {
+    
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
-
+   const navigate = useNavigate()
+    
     const handleDrawerOpen = () => {
         setOpen(true);
     };
@@ -118,14 +123,14 @@ export default function PersistentDrawerLeft() {
                 <List>
                     {['MCSP-09', 'MCSP-10', 'MCSP-11', 'MCSP-12'].map((text, index) => (
                         <ListItem button key={text}>
-                            <ListItemIcon>
-                                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                            </ListItemIcon>
                             <ListItemText primary={text} />
                         </ListItem>
                     ))}
                 </List>
                 <Divider />
+                    <div onClick={() => navigate('/createuser')}>
+                    <ListItem button >Create Student</ListItem>
+                    </div>
             </Drawer>
             <Main open={open}>
                 <DrawerHeader />
